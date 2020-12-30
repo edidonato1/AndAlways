@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 export default function Home(props) {
   const { data } = props
     return (
-        <div className="container flex items-center mx-auto justify-center">
+        <div className="container flex items-start mx-auto h-screen">
         <Hero
           data={data}
           src="/images/hero.png" />
