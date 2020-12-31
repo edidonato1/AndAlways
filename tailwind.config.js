@@ -33,7 +33,7 @@ module.exports = {
         'button': '220px',
       },
       minHeight: {
-        'mobile': '500px',
+        'mobile': '570px',
       },
       height: {
         'button': '50px',
