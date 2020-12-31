@@ -1,5 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
+* {
+  font-family: avenir;
+  transition: .4s;
+}
 
+p {
+  text-shadow: 1px 1px 2px #385B59;
+}
+
+h1 {
+  text-shadow: 1px 2px 2px #18343E;
+}
