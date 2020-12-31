@@ -29,3 +29,7 @@ Recreate your own version of this hero image using [Next.js](https://nextjs.org)
 * Knowledge of modern best practices/coding patterns
 * Clean commit history
 * Deploy & send URL
+
+## Comments 
+
+Thank you for this opportunity.  These were some new technologies for me, and I enjoyed the challenges that came along with that learning curve.
