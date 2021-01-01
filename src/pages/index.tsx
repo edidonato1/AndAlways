@@ -16,7 +16,7 @@ export default function Home(props: Props) {
   const { data } = props;
 
   return (
-    <div className="xs:px-0 sm:px-10 container flex items-start mx-auto h-screen">
+    <div className="px-0 sm:px-10 container flex items-start mx-auto h-screen">
       <Hero
         data={data} />
     </div>
