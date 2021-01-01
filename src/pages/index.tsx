@@ -1,7 +1,8 @@
-import React from 'react';
+import { GetServerSideProps } from 'next';
+import React, { FC } from 'react';
 import Hero from "../components/Hero";
 
-interface HeroData {
+export interface HeroData {
   header: string;
   content: string;
   cta: string;
@@ -12,18 +13,16 @@ interface Props {
   data: HeroData;
 }
 
-export default function Home(props: Props) {
-  const { data } = props;
+const Home: FC<Props> = ({ data }) => {
 
   return (
     <div className="px-0 sm:px-10 container flex items-start mx-auto h-screen">
-      <Hero
-        data={data} />
+      <Hero data={data} />
     </div>
   )
 }
 
-export async function getServerSideProps() {
+export  const getServerSideProps: GetServerSideProps = async() => {
   const res = await fetch(`http://localhost:3000/api/cms`);
   const data = await res.json();
 
@@ -33,3 +32,5 @@ export async function getServerSideProps() {
     }
   }
 }
+
+export default Home
