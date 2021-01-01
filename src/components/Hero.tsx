@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 
-export default function Hero({ src, data }) {
+export default function Hero({ data }) {
   const [mobile, setMobile] = useState(false); // allow for conditional mobile rendiering 
 
   const handler = () => {
@@ -30,7 +30,7 @@ export default function Hero({ src, data }) {
             <div className="flex xs:flex-col items-center xs:w-5/5 align-center justify-evenly">
               <h2 className="text-darkBlue text-3xl text-center font-title2 font-bold my-5">{data.header}</h2>
               <div className="w-4/5">
-                <Image src={src} width="573" height="767" layout="intrinsic" quality={100} />
+                <Image src={data.src} width="573" height="767" layout="intrinsic" quality={100} />
               </div>
               <button className="bg-deepGreen shadow-xl w-button h-button text-peach hover:text-pink py-3 px-5 my-5 rounded">{data.cta}</button>
             </div>
@@ -40,7 +40,7 @@ export default function Hero({ src, data }) {
         :
         <div style={imageStyles} className="flex justify-between w-screen xs:h-5/6 p-10 sm:h-1/2 my-20 min-h-full">
           <div className="relative h-100 xs:w-2/5 w-2/5" >
-            <Image src={src} layout="fill" objectFit="contain" quality={100} />
+            <Image src={data.src} layout="fill" objectFit="contain" quality={100} />
           </div>
           <div className="flex xs:flex-col xs:w-3/5 sm:w-4/5 md:w-3/5 mx-5 justify-evenly h-100 ">
             <h1 className="sm:text-3xl md:text-4xl lg:text-5xl text-white font-title2 font-bold">{data.header}</h1>

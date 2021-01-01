@@ -1,25 +1,35 @@
 import React from 'react';
 import Hero from "../components/Hero";
 
-export default function Home({data}) {
+interface HeroData {
+  header: string;
+  content: string;
+  cta: string;
+  src: string;
+}
 
-  
+interface Props {
+  data: HeroData;
+}
+
+export default function Home(props: Props) {
+  const { data } = props;
+
   return (
     <div className="xs:px-0 sm:px-10 container flex items-start mx-auto h-screen">
       <Hero
-        data={data}
-        src="/images/hero.png" />
+        data={data} />
     </div>
   )
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/cms`)
-  const data = await res.json()
+  const res = await fetch(`http://localhost:3000/api/cms`);
+  const data = await res.json();
 
   return {
     props: {
-      data: data
+      data: data,
     }
   }
 }
