@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { HeroData } from '../pages/index'
+import { HeroData } from '../pages/index';
 
 interface Props {
   data: HeroData;
@@ -11,7 +11,7 @@ const Hero: FC<Props> = ({ data }) => {
     background: "url(https://i.imgur.com/fDJvUeX.jpg)",
     backgroundSize: "cover",
     backgroundPosition: "center"
-  }
+  };
 
   return (
     <div
@@ -31,4 +31,4 @@ const Hero: FC<Props> = ({ data }) => {
   )
 }
 
-export default Hero
+export default Hero;
